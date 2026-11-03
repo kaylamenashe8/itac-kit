@@ -8,17 +8,20 @@
 
 ## Drafts
 
-<!-- Copy this block per bug. The draft id (B1, B2...) is what spira-file.ts takes. -->
+<!-- Copy this block per bug (or run `npm run spira -- --template`). The draft id (DRAFT-01...) is what spira-file.ts takes: `npm run spira -- --from-bugs docs/BUGS.md --id DRAFT-01 [--submit]`. -->
 
-### B1 — <component>: <symptom>
-- **Spira ID:** (filled by spira-file.ts)
-- **Environment:** URL · browser + version · date · commit
-- **Preconditions:**
-- **Steps:**
-  1.
-- **Expected:**
-- **Actual:**
-- **Severity / priority:**
-- **Evidence:** Jam: <public link> · screenshot: `test-results/<...>/test-failed-1.png` · report: <Pages link to the failing test>
-- **Linked test:** `tests/e2e/<file>.spec.ts` > "<title>" — `knownBug('SPIRA-<id>', '<title>', '<url>')`
-- **Status:** draft | approved | filed
+### DRAFT-01: <Component>: <symptom>
+- Environment: <URL>, Chromium <version>, <date>, commit <sha>
+- Preconditions: <state needed>
+- Steps:
+  1. <step>
+  2. <step>
+- Expected: <expected result>
+- Actual: <actual result>
+- Severity: high
+- Priority: P2
+- Jam: https://jam.dev/c/<id>
+- Screenshot: test-results/<test-dir>/test-failed-1.png
+- Report: https://<user>.github.io/<repo>/runs/<run_id>/#?testId=<id>
+- Linked test: tests/e2e/<feature>/<file>.spec.ts
+- Spira: pending
