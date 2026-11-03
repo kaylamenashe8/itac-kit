@@ -1,38 +1,46 @@
 <title>ITAC Control Center</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
 <style>
 /* Layout: calm cockpit. A "Needs you" home screen + one view per area (pill nav; bottom bar on phone). Details open in a sheet. */
 :root{
-  --bg:#f3f8f6; --card:#ffffff; --soft:#e8f1ee; --line:#d9e6e1; --ink:#23312d; --muted:#6c7f78;
-  --pink:#ff6f91; --pink-soft:#ffe3ea; --mint:#2f9e8b; --mint-soft:#d8f1ea;
-  --sun:#c98a00; --sun-soft:#fff1cc; --berry:#d6455d; --berry-soft:#ffe0e4; --lilac:#7c63d8; --lilac-soft:#ece6ff;
-  --sleep:#8a9a94; --sleep-soft:#e9efed; --add:#dcf3e8; --del:#ffe4e8;
-  --f-display:"Fredoka","Nunito",ui-rounded,system-ui,sans-serif;
-  --f-body:"Nunito",ui-rounded,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --bg:#f4f6f8; --card:#ffffff; --soft:#edf0f3; --line:#dde2e8; --ink:#18212b; --muted:#5d6977;
+  --accent:#0d7480; --accent-soft:#ddf0f1; --mint:#1d8656; --mint-soft:#e0f2e8;
+  --sun:#9a6200; --sun-soft:#faefd8; --berry:#bf3340; --berry-soft:#fbe4e6; --lilac:#4f49c4; --lilac-soft:#e9e8fa;
+  --sleep:#6f7b88; --sleep-soft:#eceff2; --add:#e0f2e8; --del:#fbe4e6;
+  --f-display:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
   --f-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
-  --r:18px; --shadow:0 1px 2px rgba(35,49,45,.06),0 6px 20px rgba(35,49,45,.06);
+  --r:10px; --shadow:0 1px 2px rgba(24,33,43,.06),0 2px 8px rgba(24,33,43,.04);
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#141c1a; --card:#1c2724; --soft:#23302c; --line:#2e3d38; --ink:#e6efec; --muted:#93a8a0;
-  --pink:#ff8aa6; --pink-soft:#43242d; --mint:#5cc8b3; --mint-soft:#183a33;
-  --sun:#f0b73e; --sun-soft:#3b2f12; --berry:#ff7d8f; --berry-soft:#42202a; --lilac:#a993f5; --lilac-soft:#2c2547;
-  --sleep:#8ea199; --sleep-soft:#25302d; --add:#173628; --del:#40202a;
-  --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.25); color-scheme:dark}}
+  --bg:#11161c; --card:#1a2129; --soft:#222a34; --line:#2c3641; --ink:#e3e8ee; --muted:#95a1ae;
+  --accent:#4dbcc6; --accent-soft:#12333a; --mint:#4cc38a; --mint-soft:#15301f;
+  --sun:#e3a73a; --sun-soft:#35290f; --berry:#f07a84; --berry-soft:#3a1c21; --lilac:#9d97f2; --lilac-soft:#25233f;
+  --sleep:#93a0ac; --sleep-soft:#232b34; --add:#15301f; --del:#3a1c21;
+  --shadow:0 1px 2px rgba(0,0,0,.35); color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#141c1a; --card:#1c2724; --soft:#23302c; --line:#2e3d38; --ink:#e6efec; --muted:#93a8a0;
-  --pink:#ff8aa6; --pink-soft:#43242d; --mint:#5cc8b3; --mint-soft:#183a33;
-  --sun:#f0b73e; --sun-soft:#3b2f12; --berry:#ff7d8f; --berry-soft:#42202a; --lilac:#a993f5; --lilac-soft:#2c2547;
-  --sleep:#8ea199; --sleep-soft:#25302d; --add:#173628; --del:#40202a;
-  --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.25); color-scheme:dark}
+  --bg:#11161c; --card:#1a2129; --soft:#222a34; --line:#2c3641; --ink:#e3e8ee; --muted:#95a1ae;
+  --accent:#4dbcc6; --accent-soft:#12333a; --mint:#4cc38a; --mint-soft:#15301f;
+  --sun:#e3a73a; --sun-soft:#35290f; --berry:#f07a84; --berry-soft:#3a1c21; --lilac:#9d97f2; --lilac-soft:#25233f;
+  --sleep:#93a0ac; --sleep-soft:#232b34; --add:#15301f; --del:#3a1c21;
+  --shadow:0 1px 2px rgba(0,0,0,.35); color-scheme:dark}
+.face{display:grid;place-items:center;border-radius:8px;flex:none}
+.face svg{width:55%;height:55%}
+.st-working{background:var(--mint-soft);color:var(--mint)}
+.st-blocked{background:var(--berry-soft);color:var(--berry)}
+.st-review{background:var(--lilac-soft);color:var(--lilac)}
+.st-done{background:var(--soft);color:var(--muted)}
+.st-paused{background:var(--sleep-soft);color:var(--sleep)}
+.st-brand{background:var(--accent);color:#fff}
 *{box-sizing:border-box}
 [hidden]{display:none!important}
 body{background:var(--bg);color:var(--ink);font:15px/1.5 var(--f-body);margin:0}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
 .wrap{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 button{font:inherit;color:inherit;cursor:pointer}
-:focus-visible{outline:3px solid var(--pink);outline-offset:2px;border-radius:8px}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:8px}
 a{color:var(--mint);font-weight:700}
 h1,h2,h3{font-family:var(--f-display);font-weight:600;margin:0;text-wrap:balance;letter-spacing:.005em}
 .mono{font-family:var(--f-mono);font-size:12.5px;font-variant-numeric:tabular-nums}
@@ -43,12 +51,12 @@ header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background
 .hd{display:flex;align-items:center;gap:12px;padding-block:14px 10px;flex-wrap:wrap}
 .logo{display:flex;align-items:center;gap:10px}
 .logo h1{font-size:20px}
-.sample{font:700 11px var(--f-body);color:var(--sun);background:var(--sun-soft);border-radius:999px;padding:2px 9px}
-nav.views{display:flex;gap:4px;margin-left:auto;background:var(--card);border-radius:999px;padding:4px;box-shadow:var(--shadow)}
-nav.views a{font:600 14px var(--f-display);color:var(--muted);text-decoration:none;padding:6px 13px;border-radius:999px;display:flex;align-items:center;gap:6px;white-space:nowrap}
-nav.views a[aria-current="page"]{background:var(--pink-soft);color:var(--pink)}
-nav.views .dot{min-width:18px;height:18px;border-radius:999px;background:var(--pink);color:var(--card);font:700 11px/18px var(--f-body);text-align:center;padding:0 5px}
-.iconbtn{border:0;background:var(--card);border-radius:999px;width:36px;height:36px;box-shadow:var(--shadow);display:grid;place-items:center}
+.sample{font:700 11px var(--f-body);color:var(--sun);background:var(--sun-soft);border-radius:7px;padding:2px 9px}
+nav.views{display:flex;gap:4px;margin-left:auto;background:var(--card);border-radius:7px;padding:4px;box-shadow:var(--shadow)}
+nav.views a{font:600 14px var(--f-display);color:var(--muted);text-decoration:none;padding:6px 13px;border-radius:7px;display:flex;align-items:center;gap:6px;white-space:nowrap}
+nav.views a[aria-current="page"]{background:var(--accent-soft);color:var(--accent)}
+nav.views .dot{min-width:18px;height:18px;border-radius:7px;background:var(--accent);color:var(--card);font:700 11px/18px var(--f-body);text-align:center;padding:0 5px}
+.iconbtn{border:0;background:var(--card);border-radius:7px;width:36px;height:36px;box-shadow:var(--shadow);display:grid;place-items:center}
 .iconbtn svg{width:18px;height:18px}
 
 main{padding-block:8px 40px}
@@ -56,7 +64,7 @@ main{padding-block:8px 40px}
 
 /* Clock card */
 .clock{background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);padding:18px 20px;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:18px;align-items:center}
-.clock .big{font:600 44px/1 var(--f-display);font-variant-numeric:tabular-nums;color:var(--pink)}
+.clock .big{font:700 38px/1 var(--f-display);font-variant-numeric:tabular-nums;letter-spacing:-.01em;color:var(--ink)}
 .clock .lbl{font-weight:800;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
 .clock .what{font:600 18px var(--f-display)}
 .clock .side{text-align:right}
@@ -69,7 +77,8 @@ main{padding-block:8px 40px}
 .trail .stop.gate{border-color:var(--lilac)}
 .trail .stop.past.gate{background:var(--lilac);border-color:var(--lilac)}
 .trail .stop span{position:absolute;top:20px;left:50%;transform:translateX(-50%);font:700 10.5px var(--f-body);color:var(--muted);white-space:nowrap}
-.trail .me{position:absolute;top:-3px;width:28px;height:28px;margin-left:-14px;transition:left .6s}
+.trail .me{position:absolute;top:4px;width:2px;height:26px;margin-left:-1px;background:var(--accent);border-radius:2px}
+.trail .me::after{content:"now";position:absolute;top:-14px;left:50%;transform:translateX(-50%);font:700 10px var(--f-body);color:var(--accent);text-transform:uppercase;letter-spacing:.06em}
 .trail .stop.first span{left:0;transform:none}
 .trail .stop.last span{left:auto;right:0;transform:none}
 
@@ -89,20 +98,20 @@ main{padding-block:8px 40px}
 .allgood{background:var(--mint-soft);color:var(--mint);border-radius:var(--r);padding:16px;font:600 16px var(--f-display);display:flex;gap:10px;align-items:center}
 
 /* Buttons + chips */
-.btn{border:0;border-radius:999px;padding:7px 14px;font:700 13.5px var(--f-body);background:var(--soft);color:var(--ink);text-decoration:none;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.btn{border:0;border-radius:7px;padding:7px 14px;font:700 13.5px var(--f-body);background:var(--soft);color:var(--ink);text-decoration:none;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
 .btn:hover{filter:brightness(.97)}
-.btn.go{background:var(--pink);color:#fff}
+.btn.go{background:var(--accent);color:#fff}
 .btn.ok{background:var(--mint);color:#fff}
 .btn.warn{background:var(--sun-soft);color:var(--sun)}
 .btn.sm{padding:4px 11px;font-size:12.5px}
-.chip{display:inline-flex;align-items:center;gap:5px;border-radius:999px;padding:2px 10px;font:700 12px var(--f-body);white-space:nowrap}
+.chip{display:inline-flex;align-items:center;gap:5px;border-radius:7px;padding:2px 10px;font:700 12px var(--f-body);white-space:nowrap}
 .c-working{background:var(--mint-soft);color:var(--mint)}
 .c-blocked{background:var(--berry-soft);color:var(--berry)}
 .c-review{background:var(--lilac-soft);color:var(--lilac)}
 .c-done{background:var(--soft);color:var(--muted)}
 .c-paused{background:var(--sleep-soft);color:var(--sleep)}
 .c-sun{background:var(--sun-soft);color:var(--sun)}
-.c-p1{background:var(--pink-soft);color:var(--pink)}
+.c-p1{background:var(--accent-soft);color:var(--accent)}
 .c-p2{background:var(--sun-soft);color:var(--sun)}
 .c-p3{background:var(--soft);color:var(--muted)}
 
@@ -116,7 +125,6 @@ main{padding-block:8px 40px}
 .mate .top{display:flex;align-items:center;gap:10px}
 .mate h3{font-size:16px}
 .mate p{margin:0;font-size:13.5px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.face{width:44px;height:44px;flex:none}
 
 /* Lists */
 .list{background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}
@@ -144,8 +152,8 @@ button.item:hover{background:var(--soft)}
 .job.bad i{background:var(--berry-soft);color:var(--berry)}
 .job.run i{background:var(--lilac-soft);color:var(--lilac);animation:pulse 1.4s ease-in-out infinite}
 @keyframes pulse{50%{transform:scale(.9)}}
-.seg{display:inline-flex;background:var(--soft);border-radius:999px;padding:3px}
-.seg button{border:0;background:transparent;border-radius:999px;padding:5px 12px;font:700 13px var(--f-body);color:var(--muted)}
+.seg{display:inline-flex;background:var(--soft);border-radius:7px;padding:3px}
+.seg button{border:0;background:transparent;border-radius:7px;padding:5px 12px;font:700 13px var(--f-body);color:var(--muted)}
 .seg button[aria-pressed="true"]{background:var(--card);color:var(--ink);box-shadow:var(--shadow)}
 
 /* Sheet */
@@ -277,29 +285,20 @@ textarea{width:100%;min-height:90px;border:2px solid var(--line);border-radius:1
   // ---- helpers ----
   const $ = (s) => document.querySelector(s);
   const esc = (s) => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-  const stateText = {working:'working',blocked:'needs you',review:'ready for review',done:'done',paused:'napping'};
+  const stateText = {working:'working',blocked:'blocked',review:'ready for review',done:'done',paused:'paused'};
   const orderIdx = (a) => MERGE_ORDER.indexOf(a);
 
-  /** Blob buddy. Expression encodes state. */
-  function face(state, hue, size = 44){
-    const body = `hsl(${hue} 70% 78%)`, cheek = `hsl(${(hue+340)%360} 85% 72%)`, ink = '#23312d';
-    let eyes, mouth, extra = '';
-    switch(state){
-      case 'blocked': eyes = `<circle cx="17" cy="21" r="2.6" fill="${ink}"/><circle cx="31" cy="21" r="2.6" fill="${ink}"/><path d="M13 15.5l7 2M35 15.5l-7 2" stroke="${ink}" stroke-width="2" stroke-linecap="round"/>`;
-        mouth = `<ellipse cx="24" cy="31" rx="3" ry="3.4" fill="${ink}"/>`; extra = `<path d="M38 8v6" stroke="var(--berry)" stroke-width="3" stroke-linecap="round"/><circle cx="38" cy="18.5" r="1.8" fill="var(--berry)"/>`; break;
-      case 'review': eyes = `<path d="M13.5 22a3.5 3.5 0 0 1 7 0M27.5 22a3.5 3.5 0 0 1 7 0" stroke="${ink}" stroke-width="2.4" fill="none" stroke-linecap="round"/>`;
-        mouth = `<path d="M18 28.5q6 6 12 0" stroke="${ink}" stroke-width="2.4" fill="none" stroke-linecap="round"/>`; extra = `<path d="M39 6l1.2 2.8L43 10l-2.8 1.2L39 14l-1.2-2.8L35 10l2.8-1.2z" fill="var(--lilac)"/>`; break;
-      case 'done': eyes = `<path d="M13.5 21q3.5-3.5 7 0M27.5 21q3.5-3.5 7 0" stroke="${ink}" stroke-width="2.4" fill="none" stroke-linecap="round"/>`;
-        mouth = `<path d="M17 28q7 7 14 0z" fill="${ink}"/>`; break;
-      case 'paused': eyes = `<path d="M13.5 22h7M27.5 22h7" stroke="${ink}" stroke-width="2.4" stroke-linecap="round"/>`;
-        mouth = `<path d="M21 30.5h6" stroke="${ink}" stroke-width="2.2" stroke-linecap="round"/>`; extra = `<text x="35" y="12" font-family="Fredoka,sans-serif" font-size="9" font-weight="600" fill="var(--sleep)">z</text><text x="40" y="7" font-family="Fredoka,sans-serif" font-size="7" font-weight="600" fill="var(--sleep)">z</text>`; break;
-      default: eyes = `<circle cx="17" cy="21" r="2.8" fill="${ink}"/><circle cx="31" cy="21" r="2.8" fill="${ink}"/><circle cx="18" cy="20" r=".9" fill="#fff"/><circle cx="32" cy="20" r=".9" fill="#fff"/>`;
-        mouth = `<path d="M19 28.5q5 4.5 10 0" stroke="${ink}" stroke-width="2.4" fill="none" stroke-linecap="round"/>`;
-    }
-    return `<svg class="face" width="${size}" height="${size}" viewBox="0 0 48 48" aria-hidden="true">
-      <path d="M24 5c10 0 19 6.5 19 18.5S35 43 24 43 5 35.5 5 23.5 14 5 24 5z" fill="${body}"/>
-      <ellipse cx="12.5" cy="28" rx="3.2" ry="2" fill="${cheek}" opacity=".7"/><ellipse cx="35.5" cy="28" rx="3.2" ry="2" fill="${cheek}" opacity=".7"/>
-      ${eyes}${mouth}${extra}</svg>`;
+  /** Status tile: the icon and tint encode state. */
+  const ICONS = {
+    working:'<path d="M3 12h4l3-8 4 16 3-8h4"/>',
+    blocked:'<path d="M12 7v6"/><path d="M12 17h.01"/><circle cx="12" cy="12" r="9"/>',
+    review:'<circle cx="6" cy="6" r="2.5"/><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M6 8.5v7M18 15.5V11a4 4 0 0 0-4-4h-4"/>',
+    done:'<path d="M5 12.5l4.5 4.5L19 7.5"/>',
+    paused:'<path d="M9 6v12M15 6v12"/>',
+    brand:'<path d="M4 12a8 8 0 1 0 8-8"/><path d="M12 8v4l3 2"/>',
+  };
+  function face(state, hue, size = 40){
+    return `<span class="face st-${state}" style="width:${size}px;height:${size}px" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">${ICONS[state] ?? ICONS.working}</svg></span>`;
   }
   const chip = (state) => `<span class="chip c-${state}">${stateText[state]}</span>`;
   const pchip = (p) => `<span class="chip c-${p.toLowerCase()}">${p}</span>`;
@@ -326,16 +325,15 @@ textarea{width:100%;min-height:90px;border:2px solid var(--line);border-radius:1
   function clockCard(){
     const n = nowMin();
     const next = stops.find(s => s.g && toMin(s.t) > n);
-    const mood = next && toMin(next.t) - n <= 10 ? 'blocked' : 'working';
     return `<section class="clock" aria-label="Clock">
-      ${face(mood, 330, 56)}
+      ${face('brand', 0, 48)}
       <div><div class="lbl">Next up · now ${fmt(n)}</div>
         <div class="what">${next ? `${next.l} at ${next.t}` : 'All gates done'}</div></div>
       <div class="side"><div class="big">${next ? left(toMin(next.t) - n) : '✓'}</div>
         <div class="muted" style="font-size:13px;font-weight:700">submit in <b>${left(toMin('20:55') - n)}</b></div></div>
       <div class="trail" aria-hidden="true"><div class="track"></div><div class="done" style="width:${pct(n)}%"></div>
         ${stops.map((s,i) => `<div class="stop ${toMin(s.t) <= n ? 'past' : ''} ${s.g ? 'gate' : ''} ${i===0?'first':''} ${i===stops.length-1?'last':''}" style="left:${pct(toMin(s.t))}%" title="${s.l} ${s.t}"><span>${s.t}</span></div>`).join('')}
-        <div class="me" style="left:${pct(n)}%">${face('working', 330, 28)}</div></div>
+        <div class="me" style="left:${pct(n)}%"></div></div>
     </section>
     <label class="muted" style="font-size:13px;font-weight:700;display:flex;gap:6px;align-items:center;margin-top:-8px"><input type="checkbox" id="realclock" ${useReal?'checked':''}> use the real clock</label>`;
   }
@@ -363,7 +361,7 @@ textarea{width:100%;min-height:90px;border:2px solid var(--line);border-radius:1
   function home(){
     const list = needs();
     const card = (x) => {
-      if (x.kind === 'agent') return `<article class="need">${face('blocked', x.a.hue)}<h3>${esc(x.a.name)} is stuck</h3><p>${esc(x.a.ask)}</p>
+      if (x.kind === 'agent') return `<article class="need">${face('blocked', x.a.hue)}<h3>${esc(x.a.name)} is blocked</h3><p>${esc(x.a.ask)}</p>
         <div class="acts"><button class="btn go sm" data-act="note" data-id="${x.a.id}">Send a note</button><button class="btn sm" data-act="agent" data-id="${x.a.id}">Details</button></div></article>`;
       if (x.kind === 'pr') { const a = agents.find(z => z.name === x.p.who);
         return `<article class="need">${face('review', a?.hue ?? 265)}<h3>Review #${x.p.n}</h3><p>${esc(x.p.title)}${x.more ? ` · ${x.more} more waiting` : ''}</p>
@@ -377,13 +375,13 @@ textarea{width:100%;min-height:90px;border:2px solid var(--line);border-radius:1
     return `${clockCard()}
       <div class="sh"><h2>Needs you</h2><span class="muted">${list.length ? `${list.length} things` : ''}</span></div>
       ${list.length ? `<div class="needs">${list.map(card).join('')}</div>` : `<div class="allgood">${face('done',160,36)} Nothing needs you right now.</div>`}
-      <div class="sh"><h2>The team</h2><span class="muted">${agents.filter(a=>a.state==='working').length} working · tap a face</span><div class="sp"><a class="btn sm" href="#team">All agents</a></div></div>
+      <div class="sh"><h2>Agents</h2><span class="muted">${agents.filter(a=>a.state==='working').length} working · ${agents.filter(a=>a.state==='review').length} in review · ${agents.filter(a=>a.state==='done').length} done</span><div class="sp"><a class="btn sm" href="#team">All agents</a></div></div>
       <div class="strip">${agents.map(a => `<button class="buddy" data-act="agent" data-id="${a.id}" title="${esc(a.name)}: ${stateText[a.state]}">${face(a.state, a.hue)}<small>${esc(a.name)}</small></button>`).join('')}</div>`;
   }
 
   function team(){
     const order = {blocked:0,review:1,working:2,paused:3,done:4};
-    return `<div class="sh"><h2>Team</h2><span class="muted">${agents.length} agents</span><div class="sp"><button class="btn sm" data-act="pauseall">Pause everyone</button></div></div>
+    return `<div class="sh"><h2>Team</h2><span class="muted">${agents.length} agents</span><div class="sp"><button class="btn sm" data-act="pauseall">Pause all</button></div></div>
       <div class="team">${[...agents].sort((a,b) => order[a.state]-order[b.state]).map(a => `
         <button class="mate" data-act="agent" data-id="${a.id}"><div class="top">${face(a.state, a.hue)}<div><h3>${esc(a.name)}</h3>${chip(a.state)}</div></div><p>${esc(a.task)}</p></button>`).join('')}</div>`;
   }
@@ -403,7 +401,7 @@ textarea{width:100%;min-height:90px;border:2px solid var(--line);border-radius:1
     const g = gates[0]; const ok = g.jobs.filter(j=>j==='ok').length; const running = g.jobs.includes('run');
     return `<div class="sh"><h2>Stability gate</h2></div>
       <section class="gate">
-        <div class="row"><span class="verdict">${running ? 'Gate running…' : ok === 5 ? '5/5 green!' : `${ok}/5 green`}</span><span class="muted">gate ${g.id} · ${g.mode} · ${g.at}</span></div>
+        <div class="row"><span class="verdict">${running ? 'Gate running…' : ok === 5 ? 'GATE: 5/5 GREEN' : `${ok}/5 green`}</span><span class="muted">gate ${g.id} · ${g.mode} · ${g.at}</span></div>
         <div class="jobs">${g.jobs.map((j,i) => `<div class="job ${j}"><i>${j==='ok'?'✓':j==='bad'?'✕':'…'}</i>run ${i+1}</div>`).join('')}</div>
         ${g.why ? `<p class="muted" style="margin:0;font-size:14px">${esc(g.why)}</p>` : ''}
         <div class="row"><span class="seg" role="group" aria-label="Gate mode">
@@ -454,7 +452,7 @@ textarea{width:100%;min-height:90px;border:2px solid var(--line);border-radius:1
       return `<a href="#${k}" ${k===v ? 'aria-current="page"' : ''}>${x.label}${n ? `<span class="dot">${n}</span>` : ''}</a>`;
     }).join('');
     $('#main').innerHTML = `<div class="view">${render[v]()}</div>`;
-    $('#logo-face').innerHTML = face(agents.some(a => a.state==='blocked') ? 'working' : 'done', 330, 34);
+    $('#logo-face').innerHTML = face('brand', 0, 30);
   }
 
   // ---- sheet ----
@@ -468,7 +466,7 @@ textarea{width:100%;min-height:90px;border:2px solid var(--line);border-radius:1
       <div class="kv"><h4>Details</h4><p class="mono">updated ${a.upd}${a.plan ? ` · plan ${a.plan}` : ''}${a.pr ? ` · PR #${a.pr}` : ''}</p></div>
       <div class="kv"><h4>Note to ${esc(a.name)}</h4><textarea id="note-text" placeholder="It reads this before its next step."></textarea></div>
       <div class="acts"><button class="btn go" data-act="sendnote" data-id="${a.id}">Send note</button>
-        ${a.state==='paused' ? `<button class="btn" data-act="resume" data-id="${a.id}">Wake up</button>` : a.state==='done' ? '' : `<button class="btn" data-act="pause" data-id="${a.id}">Pause</button>`}
+        ${a.state==='paused' ? `<button class="btn" data-act="resume" data-id="${a.id}">Resume</button>` : a.state==='done' ? '' : `<button class="btn" data-act="pause" data-id="${a.id}">Pause</button>`}
         ${a.pr ? `<button class="btn" data-act="pr" data-n="${a.pr}">Its PR</button>` : ''}</div>`);
   }
 
@@ -501,9 +499,9 @@ textarea{width:100%;min-height:90px;border:2px solid var(--line);border-radius:1
     if (act === 'note' && a){ agentSheet(a); $('#note-text').focus(); }
     if (act === 'pr' && p) prSheet(p);
     if (act === 'sendnote' && a){ const t = $('#note-text').value.trim() || '(empty)'; closeSheet(); toast(`Note sent to ${a.name}`, `append to .agents/inbox/${a.id}.md: "${t.slice(0,50)}"`); }
-    if (act === 'pause' && a){ a.state = 'paused'; closeSheet(); draw(); toast(`${a.name} is napping`, `write PAUSE to .agents/inbox/${a.id}.md`); }
-    if (act === 'resume' && a){ a.state = 'working'; closeSheet(); draw(); toast(`${a.name} is back to work`, `write RESUME to .agents/inbox/${a.id}.md`); }
-    if (act === 'pauseall'){ agents.forEach(x => { if (x.state === 'working') x.state = 'paused'; }); draw(); toast('Everyone is napping', 'write PAUSE to every working agent'); }
+    if (act === 'pause' && a){ a.state = 'paused'; closeSheet(); draw(); toast(`${a.name} paused`, `write PAUSE to .agents/inbox/${a.id}.md`); }
+    if (act === 'resume' && a){ a.state = 'working'; closeSheet(); draw(); toast(`${a.name} resumed`, `write RESUME to .agents/inbox/${a.id}.md`); }
+    if (act === 'pauseall'){ agents.forEach(x => { if (x.state === 'working') x.state = 'paused'; }); draw(); toast('All working agents paused', 'write PAUSE to every working agent'); }
     if (act === 'merge' && p){
       if (b.dataset.warn && !b.dataset.sure){ b.dataset.sure = '1'; b.textContent = 'Merge anyway'; b.className = 'btn warn'; return; }
       prs.splice(prs.indexOf(p), 1);
