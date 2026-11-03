@@ -38,7 +38,7 @@ set_count=0; skipped=()
 for k in "${SECRETS[@]}"; do
   v=$(value_of "$k")
   if [ -n "$v" ]; then
-    printf '%s' "$v" | gh secret set "$k" -R "$REPO" --body - >/dev/null
+    printf '%s' "$v" | gh secret set "$k" -R "$REPO" >/dev/null  # value from stdin (never --body -: that stores a literal "-")
     echo "✓ secret  $k"
     set_count=$((set_count + 1))
   else
