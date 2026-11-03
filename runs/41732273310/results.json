@@ -1,0 +1,892 @@
+{
+  "config": {
+    "argv": [],
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "ci": {
+        "commitHref": "https://github.com/kaylamenashe8/itac-kit/commit/04bc2b5f5b01765d16f06c5d425c53c41120b469",
+        "commitHash": "04bc2b5f5b01765d16f06c5d425c53c41120b469",
+        "buildHref": "https://github.com/kaylamenashe8/itac-kit/actions/runs/41732273310"
+      },
+      "actualWorkers": 7
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/__w/itac-kit/itac-kit/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/kaylamenashe8/itac-kit/commit/04bc2b5f5b01765d16f06c5d425c53c41120b469",
+            "commitHash": "04bc2b5f5b01765d16f06c5d425c53c41120b469",
+            "buildHref": "https://github.com/kaylamenashe8/itac-kit/actions/runs/41732273310"
+          },
+          "actualWorkers": 2
+        },
+        "name": "setup",
+        "testDir": "/__w/itac-kit/itac-kit/tests",
+        "testIgnore": [
+          "**/generated/**"
+        ],
+        "testMatch": [
+          "/auth\\.setup\\.ts/"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/__w/itac-kit/itac-kit/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/kaylamenashe8/itac-kit/commit/04bc2b5f5b01765d16f06c5d425c53c41120b469",
+            "commitHash": "04bc2b5f5b01765d16f06c5d425c53c41120b469",
+            "buildHref": "https://github.com/kaylamenashe8/itac-kit/actions/runs/41732273310"
+          },
+          "actualWorkers": 2
+        },
+        "name": "chromium",
+        "testDir": "/__w/itac-kit/itac-kit/tests",
+        "testIgnore": [
+          "**/api/**",
+          "**/generated/**"
+        ],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/__w/itac-kit/itac-kit/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/kaylamenashe8/itac-kit/commit/04bc2b5f5b01765d16f06c5d425c53c41120b469",
+            "commitHash": "04bc2b5f5b01765d16f06c5d425c53c41120b469",
+            "buildHref": "https://github.com/kaylamenashe8/itac-kit/actions/runs/41732273310"
+          },
+          "actualWorkers": 2
+        },
+        "name": "setup",
+        "testDir": "/__w/itac-kit/itac-kit/tests",
+        "testIgnore": [
+          "**/generated/**"
+        ],
+        "testMatch": [
+          "/auth\\.setup\\.ts/"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/__w/itac-kit/itac-kit/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/kaylamenashe8/itac-kit/commit/04bc2b5f5b01765d16f06c5d425c53c41120b469",
+            "commitHash": "04bc2b5f5b01765d16f06c5d425c53c41120b469",
+            "buildHref": "https://github.com/kaylamenashe8/itac-kit/actions/runs/41732273310"
+          },
+          "actualWorkers": 2
+        },
+        "name": "chromium",
+        "testDir": "/__w/itac-kit/itac-kit/tests",
+        "testIgnore": [
+          "**/api/**",
+          "**/generated/**"
+        ],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/__w/itac-kit/itac-kit/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/kaylamenashe8/itac-kit/commit/04bc2b5f5b01765d16f06c5d425c53c41120b469",
+            "commitHash": "04bc2b5f5b01765d16f06c5d425c53c41120b469",
+            "buildHref": "https://github.com/kaylamenashe8/itac-kit/actions/runs/41732273310"
+          },
+          "actualWorkers": 2
+        },
+        "name": "setup",
+        "testDir": "/__w/itac-kit/itac-kit/tests",
+        "testIgnore": [
+          "**/generated/**"
+        ],
+        "testMatch": [
+          "/auth\\.setup\\.ts/"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/__w/itac-kit/itac-kit/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/kaylamenashe8/itac-kit/commit/04bc2b5f5b01765d16f06c5d425c53c41120b469",
+            "commitHash": "04bc2b5f5b01765d16f06c5d425c53c41120b469",
+            "buildHref": "https://github.com/kaylamenashe8/itac-kit/actions/runs/41732273310"
+          },
+          "actualWorkers": 2
+        },
+        "name": "chromium",
+        "testDir": "/__w/itac-kit/itac-kit/tests",
+        "testIgnore": [
+          "**/api/**",
+          "**/generated/**"
+        ],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/__w/itac-kit/itac-kit/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/kaylamenashe8/itac-kit/commit/04bc2b5f5b01765d16f06c5d425c53c41120b469",
+            "commitHash": "04bc2b5f5b01765d16f06c5d425c53c41120b469",
+            "buildHref": "https://github.com/kaylamenashe8/itac-kit/actions/runs/41732273310"
+          },
+          "actualWorkers": 1
+        },
+        "name": "api",
+        "testDir": "/__w/itac-kit/itac-kit/tests",
+        "testIgnore": [
+          "**/generated/**"
+        ],
+        "testMatch": [
+          "/tests\\/api\\/.*\\.spec\\.ts/"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [],
+    "reporter": [
+      [
+        "dot"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "rootDir": "/__w/itac-kit/itac-kit/tests",
+    "quiet": false,
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 16,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "auth.setup.ts",
+      "file": "auth.setup.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "authenticate",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectName": "setup",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 8271,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeHidden\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByLabel(/password/i)\nExpected: hidden\nReceived: visible\nTimeout:  7000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeHidden\" getByLabel(/password/i) with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel(/password/i)\u001b[22m\n\u001b[2m    18 × locator resolved to <input value=\"-\" id=\"password\" type=\"password\" name=\"password\" autocorrect=\"off\" data-test=\"password\" aria-label=\"Password\" autocapitalize=\"none\" placeholder=\"Password\" class=\"input_error form_input error\"/>\u001b[22m\n\u001b[2m       - unexpected value \"visible\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeHidden\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByLabel(/password/i)\nExpected: hidden\nReceived: visible\nTimeout:  7000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeHidden\" getByLabel(/password/i) with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel(/password/i)\u001b[22m\n\u001b[2m    18 × locator resolved to <input value=\"-\" id=\"password\" type=\"password\" name=\"password\" autocorrect=\"off\" data-test=\"password\" aria-label=\"Password\" autocapitalize=\"none\" placeholder=\"Password\" class=\"input_error form_input error\"/>\u001b[22m\n\u001b[2m       - unexpected value \"visible\"\u001b[22m\n\n    at LoginPage.expectLoggedIn (/__w/itac-kit/itac-kit/src/pages/LoginPage.ts:49:53)\n    at /__w/itac-kit/itac-kit/tests/auth.setup.ts:19:3",
+                    "location": {
+                      "file": "/__w/itac-kit/itac-kit/src/pages/LoginPage.ts",
+                      "column": 53,
+                      "line": 49
+                    },
+                    "snippet": "   at ../src/pages/LoginPage.ts:49\n\n\u001b[0m \u001b[90m 47 |\u001b[39m   \u001b[36masync\u001b[39m expectLoggedIn()\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[36mvoid\u001b[39m\u001b[33m>\u001b[39m {\n \u001b[90m 48 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoHaveURL(\u001b[35m/login|signin|sign-in/i\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 49 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/password/i\u001b[39m))\u001b[33m.\u001b[39mtoBeHidden()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 50 |\u001b[39m   }\n \u001b[90m 51 |\u001b[39m }\n \u001b[90m 52 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/__w/itac-kit/itac-kit/src/pages/LoginPage.ts",
+                        "column": 53,
+                        "line": 49
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeHidden\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByLabel(/password/i)\nExpected: hidden\nReceived: visible\nTimeout:  7000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeHidden\" getByLabel(/password/i) with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel(/password/i)\u001b[22m\n\u001b[2m    18 × locator resolved to <input value=\"-\" id=\"password\" type=\"password\" name=\"password\" autocorrect=\"off\" data-test=\"password\" aria-label=\"Password\" autocapitalize=\"none\" placeholder=\"Password\" class=\"input_error form_input error\"/>\u001b[22m\n\u001b[2m       - unexpected value \"visible\"\u001b[22m\n\n\n   at ../src/pages/LoginPage.ts:49\n\n  47 |   async expectLoggedIn(): Promise<void> {\n  48 |     await expect(this.page).not.toHaveURL(/login|signin|sign-in/i);\n> 49 |     await expect(this.page.getByLabel(/password/i)).toBeHidden();\n     |                                                     ^\n  50 |   }\n  51 | }\n  52 |\n    at LoginPage.expectLoggedIn (/__w/itac-kit/itac-kit/src/pages/LoginPage.ts:49:53)\n    at /__w/itac-kit/itac-kit/tests/auth.setup.ts:19:3"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T22:38:04.779Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/__w/itac-kit/itac-kit/all/blob-report/resources/ddf07e16f668da9464b5665e933d179946a87d2b.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/__w/itac-kit/itac-kit/all/blob-report/resources/1850a9c41d358b923bd72545667d554329576bce.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/__w/itac-kit/itac-kit/all/blob-report/resources/95a98764670fa4dda25ed07eabd43865877f1441.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/__w/itac-kit/itac-kit/all/blob-report/resources/bccf8e0cfe66e0c3f3ee193775e36f94ef6f1fbb.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/__w/itac-kit/itac-kit/src/pages/LoginPage.ts",
+                    "column": 53,
+                    "line": 49
+                  }
+                },
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 8037,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeHidden\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByLabel(/password/i)\nExpected: hidden\nReceived: visible\nTimeout:  7000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeHidden\" getByLabel(/password/i) with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel(/password/i)\u001b[22m\n\u001b[2m    18 × locator resolved to <input value=\"-\" id=\"password\" type=\"password\" name=\"password\" autocorrect=\"off\" data-test=\"password\" aria-label=\"Password\" autocapitalize=\"none\" placeholder=\"Password\" class=\"input_error form_input error\"/>\u001b[22m\n\u001b[2m       - unexpected value \"visible\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeHidden\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByLabel(/password/i)\nExpected: hidden\nReceived: visible\nTimeout:  7000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeHidden\" getByLabel(/password/i) with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel(/password/i)\u001b[22m\n\u001b[2m    18 × locator resolved to <input value=\"-\" id=\"password\" type=\"password\" name=\"password\" autocorrect=\"off\" data-test=\"password\" aria-label=\"Password\" autocapitalize=\"none\" placeholder=\"Password\" class=\"input_error form_input error\"/>\u001b[22m\n\u001b[2m       - unexpected value \"visible\"\u001b[22m\n\n    at LoginPage.expectLoggedIn (/__w/itac-kit/itac-kit/src/pages/LoginPage.ts:49:53)\n    at /__w/itac-kit/itac-kit/tests/auth.setup.ts:19:3",
+                    "location": {
+                      "file": "/__w/itac-kit/itac-kit/src/pages/LoginPage.ts",
+                      "column": 53,
+                      "line": 49
+                    },
+                    "snippet": "   at ../src/pages/LoginPage.ts:49\n\n\u001b[0m \u001b[90m 47 |\u001b[39m   \u001b[36masync\u001b[39m expectLoggedIn()\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[36mvoid\u001b[39m\u001b[33m>\u001b[39m {\n \u001b[90m 48 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoHaveURL(\u001b[35m/login|signin|sign-in/i\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 49 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/password/i\u001b[39m))\u001b[33m.\u001b[39mtoBeHidden()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 50 |\u001b[39m   }\n \u001b[90m 51 |\u001b[39m }\n \u001b[90m 52 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/__w/itac-kit/itac-kit/src/pages/LoginPage.ts",
+                        "column": 53,
+                        "line": 49
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeHidden\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByLabel(/password/i)\nExpected: hidden\nReceived: visible\nTimeout:  7000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeHidden\" getByLabel(/password/i) with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel(/password/i)\u001b[22m\n\u001b[2m    18 × locator resolved to <input value=\"-\" id=\"password\" type=\"password\" name=\"password\" autocorrect=\"off\" data-test=\"password\" aria-label=\"Password\" autocapitalize=\"none\" placeholder=\"Password\" class=\"input_error form_input error\"/>\u001b[22m\n\u001b[2m       - unexpected value \"visible\"\u001b[22m\n\n\n   at ../src/pages/LoginPage.ts:49\n\n  47 |   async expectLoggedIn(): Promise<void> {\n  48 |     await expect(this.page).not.toHaveURL(/login|signin|sign-in/i);\n> 49 |     await expect(this.page.getByLabel(/password/i)).toBeHidden();\n     |                                                     ^\n  50 |   }\n  51 | }\n  52 |\n    at LoginPage.expectLoggedIn (/__w/itac-kit/itac-kit/src/pages/LoginPage.ts:49:53)\n    at /__w/itac-kit/itac-kit/tests/auth.setup.ts:19:3"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2026-11-03T22:38:14.874Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/__w/itac-kit/itac-kit/all/blob-report/resources/715fb662264e46c26a615eb37ef97187a2a5fb4c.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/__w/itac-kit/itac-kit/all/blob-report/resources/d75986d0af0b361385a34e95ac33a8a185a16b3f.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/__w/itac-kit/itac-kit/all/blob-report/resources/e705b1721f4d6a6f2e8656a8628218aaa4d99beb.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/__w/itac-kit/itac-kit/all/blob-report/resources/d93ca1cd8223d96e6ce907280b34c1a4031e9950.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/__w/itac-kit/itac-kit/src/pages/LoginPage.ts",
+                    "column": 53,
+                    "line": 49
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "17e3fe6f4d9d8bd79c6b-60f085b113a677673906",
+          "file": "auth.setup.ts",
+          "line": 13,
+          "column": 1
+        },
+        {
+          "title": "authenticate",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectName": "setup",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 8568,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeHidden\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByLabel(/password/i)\nExpected: hidden\nReceived: visible\nTimeout:  7000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeHidden\" getByLabel(/password/i) with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel(/password/i)\u001b[22m\n\u001b[2m    18 × locator resolved to <input value=\"-\" id=\"password\" type=\"password\" name=\"password\" autocorrect=\"off\" data-test=\"password\" aria-label=\"Password\" autocapitalize=\"none\" placeholder=\"Password\" class=\"input_error form_input error\"/>\u001b[22m\n\u001b[2m       - unexpected value \"visible\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeHidden\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByLabel(/password/i)\nExpected: hidden\nReceived: visible\nTimeout:  7000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeHidden\" getByLabel(/password/i) with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel(/password/i)\u001b[22m\n\u001b[2m    18 × locator resolved to <input value=\"-\" id=\"password\" type=\"password\" name=\"password\" autocorrect=\"off\" data-test=\"password\" aria-label=\"Password\" autocapitalize=\"none\" placeholder=\"Password\" class=\"input_error form_input error\"/>\u001b[22m\n\u001b[2m       - unexpected value \"visible\"\u001b[22m\n\n    at LoginPage.expectLoggedIn (/__w/itac-kit/itac-kit/src/pages/LoginPage.ts:49:53)\n    at /__w/itac-kit/itac-kit/tests/auth.setup.ts:19:3",
+                    "location": {
+                      "file": "/__w/itac-kit/itac-kit/src/pages/LoginPage.ts",
+                      "column": 53,
+                      "line": 49
+                    },
+                    "snippet": "   at ../src/pages/LoginPage.ts:49\n\n\u001b[0m \u001b[90m 47 |\u001b[39m   \u001b[36masync\u001b[39m expectLoggedIn()\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[36mvoid\u001b[39m\u001b[33m>\u001b[39m {\n \u001b[90m 48 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoHaveURL(\u001b[35m/login|signin|sign-in/i\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 49 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/password/i\u001b[39m))\u001b[33m.\u001b[39mtoBeHidden()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 50 |\u001b[39m   }\n \u001b[90m 51 |\u001b[39m }\n \u001b[90m 52 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/__w/itac-kit/itac-kit/src/pages/LoginPage.ts",
+                        "column": 53,
+                        "line": 49
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeHidden\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByLabel(/password/i)\nExpected: hidden\nReceived: visible\nTimeout:  7000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeHidden\" getByLabel(/password/i) with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel(/password/i)\u001b[22m\n\u001b[2m    18 × locator resolved to <input value=\"-\" id=\"password\" type=\"password\" name=\"password\" autocorrect=\"off\" data-test=\"password\" aria-label=\"Password\" autocapitalize=\"none\" placeholder=\"Password\" class=\"input_error form_input error\"/>\u001b[22m\n\u001b[2m       - unexpected value \"visible\"\u001b[22m\n\n\n   at ../src/pages/LoginPage.ts:49\n\n  47 |   async expectLoggedIn(): Promise<void> {\n  48 |     await expect(this.page).not.toHaveURL(/login|signin|sign-in/i);\n> 49 |     await expect(this.page.getByLabel(/password/i)).toBeHidden();\n     |                                                     ^\n  50 |   }\n  51 | }\n  52 |\n    at LoginPage.expectLoggedIn (/__w/itac-kit/itac-kit/src/pages/LoginPage.ts:49:53)\n    at /__w/itac-kit/itac-kit/tests/auth.setup.ts:19:3"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T22:38:05.761Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/__w/itac-kit/itac-kit/all/blob-report/resources/1debd1a5aa935c2a75e9c81ef8ed3af24ac713e9.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/__w/itac-kit/itac-kit/all/blob-report/resources/f24b820a806126c50c5b6971c78582e7a99effd5.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/__w/itac-kit/itac-kit/all/blob-report/resources/33bbaca7528a76126fd1e325eb43a2456c50edd8.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/__w/itac-kit/itac-kit/all/blob-report/resources/f27298a5a68bf9a14fdcc5d2aeae5ad9f905d1c8.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/__w/itac-kit/itac-kit/src/pages/LoginPage.ts",
+                    "column": 53,
+                    "line": 49
+                  }
+                },
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 8023,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeHidden\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByLabel(/password/i)\nExpected: hidden\nReceived: visible\nTimeout:  7000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeHidden\" getByLabel(/password/i) with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel(/password/i)\u001b[22m\n\u001b[2m    18 × locator resolved to <input value=\"-\" id=\"password\" type=\"password\" name=\"password\" autocorrect=\"off\" data-test=\"password\" aria-label=\"Password\" autocapitalize=\"none\" placeholder=\"Password\" class=\"input_error form_input error\"/>\u001b[22m\n\u001b[2m       - unexpected value \"visible\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeHidden\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByLabel(/password/i)\nExpected: hidden\nReceived: visible\nTimeout:  7000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeHidden\" getByLabel(/password/i) with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel(/password/i)\u001b[22m\n\u001b[2m    18 × locator resolved to <input value=\"-\" id=\"password\" type=\"password\" name=\"password\" autocorrect=\"off\" data-test=\"password\" aria-label=\"Password\" autocapitalize=\"none\" placeholder=\"Password\" class=\"input_error form_input error\"/>\u001b[22m\n\u001b[2m       - unexpected value \"visible\"\u001b[22m\n\n    at LoginPage.expectLoggedIn (/__w/itac-kit/itac-kit/src/pages/LoginPage.ts:49:53)\n    at /__w/itac-kit/itac-kit/tests/auth.setup.ts:19:3",
+                    "location": {
+                      "file": "/__w/itac-kit/itac-kit/src/pages/LoginPage.ts",
+                      "column": 53,
+                      "line": 49
+                    },
+                    "snippet": "   at ../src/pages/LoginPage.ts:49\n\n\u001b[0m \u001b[90m 47 |\u001b[39m   \u001b[36masync\u001b[39m expectLoggedIn()\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[36mvoid\u001b[39m\u001b[33m>\u001b[39m {\n \u001b[90m 48 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoHaveURL(\u001b[35m/login|signin|sign-in/i\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 49 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/password/i\u001b[39m))\u001b[33m.\u001b[39mtoBeHidden()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 50 |\u001b[39m   }\n \u001b[90m 51 |\u001b[39m }\n \u001b[90m 52 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/__w/itac-kit/itac-kit/src/pages/LoginPage.ts",
+                        "column": 53,
+                        "line": 49
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeHidden\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByLabel(/password/i)\nExpected: hidden\nReceived: visible\nTimeout:  7000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeHidden\" getByLabel(/password/i) with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel(/password/i)\u001b[22m\n\u001b[2m    18 × locator resolved to <input value=\"-\" id=\"password\" type=\"password\" name=\"password\" autocorrect=\"off\" data-test=\"password\" aria-label=\"Password\" autocapitalize=\"none\" placeholder=\"Password\" class=\"input_error form_input error\"/>\u001b[22m\n\u001b[2m       - unexpected value \"visible\"\u001b[22m\n\n\n   at ../src/pages/LoginPage.ts:49\n\n  47 |   async expectLoggedIn(): Promise<void> {\n  48 |     await expect(this.page).not.toHaveURL(/login|signin|sign-in/i);\n> 49 |     await expect(this.page.getByLabel(/password/i)).toBeHidden();\n     |                                                     ^\n  50 |   }\n  51 | }\n  52 |\n    at LoginPage.expectLoggedIn (/__w/itac-kit/itac-kit/src/pages/LoginPage.ts:49:53)\n    at /__w/itac-kit/itac-kit/tests/auth.setup.ts:19:3"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2026-11-03T22:38:15.255Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/__w/itac-kit/itac-kit/all/blob-report/resources/aa7a3029568a071ae1d5d1d7da0e3fa942075026.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/__w/itac-kit/itac-kit/all/blob-report/resources/6fb9c418272a8eb25ff0ded4ec7b850741a78f47.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/__w/itac-kit/itac-kit/all/blob-report/resources/5b1decf69bf88b2e975e64c6ab4d80e953e1fff6.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/__w/itac-kit/itac-kit/all/blob-report/resources/5b817d3e62fc4baeb52585ff4c0415579a701f59.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/__w/itac-kit/itac-kit/src/pages/LoginPage.ts",
+                    "column": 53,
+                    "line": 49
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "17e3fe6f4d9d8bd79c6b-60f085b113a6776739061",
+          "file": "auth.setup.ts",
+          "line": 13,
+          "column": 1
+        },
+        {
+          "title": "authenticate",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectName": "setup",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 8785,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeHidden\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByLabel(/password/i)\nExpected: hidden\nReceived: visible\nTimeout:  7000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeHidden\" getByLabel(/password/i) with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel(/password/i)\u001b[22m\n\u001b[2m    18 × locator resolved to <input value=\"-\" id=\"password\" type=\"password\" name=\"password\" autocorrect=\"off\" data-test=\"password\" aria-label=\"Password\" autocapitalize=\"none\" placeholder=\"Password\" class=\"input_error form_input error\"/>\u001b[22m\n\u001b[2m       - unexpected value \"visible\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeHidden\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByLabel(/password/i)\nExpected: hidden\nReceived: visible\nTimeout:  7000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeHidden\" getByLabel(/password/i) with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel(/password/i)\u001b[22m\n\u001b[2m    18 × locator resolved to <input value=\"-\" id=\"password\" type=\"password\" name=\"password\" autocorrect=\"off\" data-test=\"password\" aria-label=\"Password\" autocapitalize=\"none\" placeholder=\"Password\" class=\"input_error form_input error\"/>\u001b[22m\n\u001b[2m       - unexpected value \"visible\"\u001b[22m\n\n    at LoginPage.expectLoggedIn (/__w/itac-kit/itac-kit/src/pages/LoginPage.ts:49:53)\n    at /__w/itac-kit/itac-kit/tests/auth.setup.ts:19:3",
+                    "location": {
+                      "file": "/__w/itac-kit/itac-kit/src/pages/LoginPage.ts",
+                      "column": 53,
+                      "line": 49
+                    },
+                    "snippet": "   at ../src/pages/LoginPage.ts:49\n\n\u001b[0m \u001b[90m 47 |\u001b[39m   \u001b[36masync\u001b[39m expectLoggedIn()\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[36mvoid\u001b[39m\u001b[33m>\u001b[39m {\n \u001b[90m 48 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoHaveURL(\u001b[35m/login|signin|sign-in/i\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 49 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/password/i\u001b[39m))\u001b[33m.\u001b[39mtoBeHidden()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 50 |\u001b[39m   }\n \u001b[90m 51 |\u001b[39m }\n \u001b[90m 52 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/__w/itac-kit/itac-kit/src/pages/LoginPage.ts",
+                        "column": 53,
+                        "line": 49
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeHidden\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByLabel(/password/i)\nExpected: hidden\nReceived: visible\nTimeout:  7000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeHidden\" getByLabel(/password/i) with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel(/password/i)\u001b[22m\n\u001b[2m    18 × locator resolved to <input value=\"-\" id=\"password\" type=\"password\" name=\"password\" autocorrect=\"off\" data-test=\"password\" aria-label=\"Password\" autocapitalize=\"none\" placeholder=\"Password\" class=\"input_error form_input error\"/>\u001b[22m\n\u001b[2m       - unexpected value \"visible\"\u001b[22m\n\n\n   at ../src/pages/LoginPage.ts:49\n\n  47 |   async expectLoggedIn(): Promise<void> {\n  48 |     await expect(this.page).not.toHaveURL(/login|signin|sign-in/i);\n> 49 |     await expect(this.page.getByLabel(/password/i)).toBeHidden();\n     |                                                     ^\n  50 |   }\n  51 | }\n  52 |\n    at LoginPage.expectLoggedIn (/__w/itac-kit/itac-kit/src/pages/LoginPage.ts:49:53)\n    at /__w/itac-kit/itac-kit/tests/auth.setup.ts:19:3"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T22:38:07.425Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/__w/itac-kit/itac-kit/all/blob-report/resources/ca2e279b33574014cc3a13a5778b03eb1cd5db1d.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/__w/itac-kit/itac-kit/all/blob-report/resources/931560bdb9f01e06b82201148fbd2cddadb96c33.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/__w/itac-kit/itac-kit/all/blob-report/resources/aa07d570b0c75c7922e77b8a375fb018403bb158.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/__w/itac-kit/itac-kit/all/blob-report/resources/a599f443cddda9b488264064ec50340d900a3ec0.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/__w/itac-kit/itac-kit/src/pages/LoginPage.ts",
+                    "column": 53,
+                    "line": 49
+                  }
+                },
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 8020,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeHidden\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByLabel(/password/i)\nExpected: hidden\nReceived: visible\nTimeout:  7000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeHidden\" getByLabel(/password/i) with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel(/password/i)\u001b[22m\n\u001b[2m    18 × locator resolved to <input value=\"-\" id=\"password\" type=\"password\" name=\"password\" autocorrect=\"off\" data-test=\"password\" aria-label=\"Password\" autocapitalize=\"none\" placeholder=\"Password\" class=\"input_error form_input error\"/>\u001b[22m\n\u001b[2m       - unexpected value \"visible\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeHidden\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByLabel(/password/i)\nExpected: hidden\nReceived: visible\nTimeout:  7000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeHidden\" getByLabel(/password/i) with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel(/password/i)\u001b[22m\n\u001b[2m    18 × locator resolved to <input value=\"-\" id=\"password\" type=\"password\" name=\"password\" autocorrect=\"off\" data-test=\"password\" aria-label=\"Password\" autocapitalize=\"none\" placeholder=\"Password\" class=\"input_error form_input error\"/>\u001b[22m\n\u001b[2m       - unexpected value \"visible\"\u001b[22m\n\n    at LoginPage.expectLoggedIn (/__w/itac-kit/itac-kit/src/pages/LoginPage.ts:49:53)\n    at /__w/itac-kit/itac-kit/tests/auth.setup.ts:19:3",
+                    "location": {
+                      "file": "/__w/itac-kit/itac-kit/src/pages/LoginPage.ts",
+                      "column": 53,
+                      "line": 49
+                    },
+                    "snippet": "   at ../src/pages/LoginPage.ts:49\n\n\u001b[0m \u001b[90m 47 |\u001b[39m   \u001b[36masync\u001b[39m expectLoggedIn()\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[36mvoid\u001b[39m\u001b[33m>\u001b[39m {\n \u001b[90m 48 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoHaveURL(\u001b[35m/login|signin|sign-in/i\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 49 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/password/i\u001b[39m))\u001b[33m.\u001b[39mtoBeHidden()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 50 |\u001b[39m   }\n \u001b[90m 51 |\u001b[39m }\n \u001b[90m 52 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/__w/itac-kit/itac-kit/src/pages/LoginPage.ts",
+                        "column": 53,
+                        "line": 49
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeHidden\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByLabel(/password/i)\nExpected: hidden\nReceived: visible\nTimeout:  7000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeHidden\" getByLabel(/password/i) with timeout 7000ms\u001b[22m\n\u001b[2m  - waiting for getByLabel(/password/i)\u001b[22m\n\u001b[2m    18 × locator resolved to <input value=\"-\" id=\"password\" type=\"password\" name=\"password\" autocorrect=\"off\" data-test=\"password\" aria-label=\"Password\" autocapitalize=\"none\" placeholder=\"Password\" class=\"input_error form_input error\"/>\u001b[22m\n\u001b[2m       - unexpected value \"visible\"\u001b[22m\n\n\n   at ../src/pages/LoginPage.ts:49\n\n  47 |   async expectLoggedIn(): Promise<void> {\n  48 |     await expect(this.page).not.toHaveURL(/login|signin|sign-in/i);\n> 49 |     await expect(this.page.getByLabel(/password/i)).toBeHidden();\n     |                                                     ^\n  50 |   }\n  51 | }\n  52 |\n    at LoginPage.expectLoggedIn (/__w/itac-kit/itac-kit/src/pages/LoginPage.ts:49:53)\n    at /__w/itac-kit/itac-kit/tests/auth.setup.ts:19:3"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2026-11-03T22:38:17.185Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/__w/itac-kit/itac-kit/all/blob-report/resources/909d6bc53356beba13ab692ff0df72756fbfe070.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/__w/itac-kit/itac-kit/all/blob-report/resources/997906ce2e55c010f0272995300f4834f7956dec.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/__w/itac-kit/itac-kit/all/blob-report/resources/51cff3bef616f5a8601622c0153bc71c90caada3.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/__w/itac-kit/itac-kit/all/blob-report/resources/fd4628def60d23987b2b2e32c8fccb08c185f1cb.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/__w/itac-kit/itac-kit/src/pages/LoginPage.ts",
+                    "column": 53,
+                    "line": 49
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "17e3fe6f4d9d8bd79c6b-60f085b113a6776739062",
+          "file": "auth.setup.ts",
+          "line": 13,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "a11y/home.a11y.spec.ts",
+      "file": "a11y/home.a11y.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Accessibility @a11y",
+          "file": "a11y/home.a11y.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should have no critical or serious axe violations when the home page loads",
+              "ok": true,
+              "tags": [
+                "a11y"
+              ],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "aba3c22a36f1dc471c99-854904773426710d3321",
+              "file": "a11y/home.a11y.spec.ts",
+              "line": 5,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "e2e/smoke/home.load.spec.ts",
+      "file": "e2e/smoke/home.load.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Home @smoke",
+          "file": "e2e/smoke/home.load.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should load the home page when visited anonymously",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "a3c4d7982e6c70b85bd4-1c64953191e398a4214f",
+              "file": "e2e/smoke/home.load.spec.ts",
+              "line": 9,
+              "column": 3
+            },
+            {
+              "title": "should show no console or page errors when the home page loads",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "a3c4d7982e6c70b85bd4-bebffb42abff5c66aa91",
+              "file": "e2e/smoke/home.load.spec.ts",
+              "line": 16,
+              "column": 3
+            },
+            {
+              "title": "should resolve every main navigation link when the header is present",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "a3c4d7982e6c70b85bd4-370fef101689d8ccd824",
+              "file": "e2e/smoke/home.load.spec.ts",
+              "line": 23,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "seed.spec.ts",
+      "file": "seed.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Seed",
+          "file": "seed.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should open the base URL when the agents seed a session",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "11ceb7af692008938f3b-3f3f110f866232069009",
+              "file": "seed.spec.ts",
+              "line": 6,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "visual/home.visual.spec.ts",
+      "file": "visual/home.visual.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Visual @visual",
+          "file": "visual/home.visual.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should match the home page baseline when rendered",
+              "ok": true,
+              "tags": [
+                "visual"
+              ],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "Visual suite runs only with VISUAL=1 (after Docker baselines exist)",
+                      "location": {
+                        "file": "/__w/itac-kit/itac-kit/tests/visual/home.visual.spec.ts",
+                        "line": 6,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1aba2a0a2e7c20ad1fd4-7b26e0f76805d21aacca",
+              "file": "visual/home.visual.spec.ts",
+              "line": 8,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "api/health.api.spec.ts",
+      "file": "api/health.api.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "API health @api",
+          "file": "api/health.api.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should answer the base URL with a non-error status when requested",
+              "ok": true,
+              "tags": [
+                "api"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "api-timing",
+                      "description": "GET /: 128ms"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 333,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-03T22:38:17.921Z",
+                      "annotations": [
+                        {
+                          "type": "api-timing",
+                          "description": "GET /: 128ms"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d9a480c825f690f728b0-2d56adba76d2b45b6b7f",
+              "file": "api/health.api.spec.ts",
+              "line": 5,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-03T22:38:03.933Z",
+    "duration": 21586.27001953125,
+    "expected": 1,
+    "skipped": 6,
+    "unexpected": 3,
+    "flaky": 0
+  }
+}
