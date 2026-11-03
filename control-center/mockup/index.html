@@ -33,7 +33,7 @@
 .st-review{background:var(--lilac-soft);color:var(--lilac)}
 .st-done{background:var(--soft);color:var(--muted)}
 .st-paused{background:var(--sleep-soft);color:var(--sleep)}
-.st-brand{background:var(--accent);color:#fff}
+.st-brand{background:var(--accent-soft);color:var(--accent)}
 *{box-sizing:border-box}
 [hidden]{display:none!important}
 body{background:var(--bg);color:var(--ink);font:15px/1.5 var(--f-body);margin:0}
@@ -74,8 +74,9 @@ main{padding-block:8px 40px}
 .trail .done{position:absolute;left:0;top:15px;height:4px;border-radius:4px;background:var(--mint)}
 .trail .stop{position:absolute;top:9px;width:16px;height:16px;margin-left:-8px;border-radius:50%;background:var(--card);border:3px solid var(--line)}
 .trail .stop.past{border-color:var(--mint);background:var(--mint)}
-.trail .stop.gate{border-color:var(--lilac)}
-.trail .stop.past.gate{background:var(--lilac);border-color:var(--lilac)}
+.trail .stop.gs{border:0;background:transparent;border-radius:0}
+.trail .stop.gs::before{content:"";position:absolute;inset:2px;border:2.5px solid var(--lilac);background:var(--card);border-radius:2px;transform:rotate(45deg)}
+.trail .stop.past.gs::before{background:var(--lilac)}
 .trail .stop span{position:absolute;top:20px;left:50%;transform:translateX(-50%);font:700 10.5px var(--f-body);color:var(--muted);white-space:nowrap}
 .trail .me{position:absolute;top:4px;width:2px;height:26px;margin-left:-1px;background:var(--accent);border-radius:2px}
 .trail .me::after{content:"now";position:absolute;top:-14px;left:50%;transform:translateX(-50%);font:700 10px var(--f-body);color:var(--accent);text-transform:uppercase;letter-spacing:.06em}
@@ -330,9 +331,9 @@ textarea{width:100%;min-height:90px;border:2px solid var(--line);border-radius:1
       <div><div class="lbl">Next up · now ${fmt(n)}</div>
         <div class="what">${next ? `${next.l} at ${next.t}` : 'All gates done'}</div></div>
       <div class="side"><div class="big">${next ? left(toMin(next.t) - n) : '✓'}</div>
-        <div class="muted" style="font-size:13px;font-weight:700">submit in <b>${left(toMin('20:55') - n)}</b></div></div>
+        <div class="muted" style="font-size:13px;font-weight:600;margin-top:4px">Submit in ${left(toMin('20:55') - n)} (20:55)</div></div>
       <div class="trail" aria-hidden="true"><div class="track"></div><div class="done" style="width:${pct(n)}%"></div>
-        ${stops.map((s,i) => `<div class="stop ${toMin(s.t) <= n ? 'past' : ''} ${s.g ? 'gate' : ''} ${i===0?'first':''} ${i===stops.length-1?'last':''}" style="left:${pct(toMin(s.t))}%" title="${s.l} ${s.t}"><span>${s.t}</span></div>`).join('')}
+        ${stops.map((s,i) => `<div class="stop ${toMin(s.t) <= n ? 'past' : ''} ${s.g ? 'gs' : ''} ${i===0?'first':''} ${i===stops.length-1?'last':''}" style="left:${pct(toMin(s.t))}%" title="${s.l} ${s.t}"><span>${s.t}</span></div>`).join('')}
         <div class="me" style="left:${pct(n)}%"></div></div>
     </section>
     <label class="muted" style="font-size:13px;font-weight:700;display:flex;gap:6px;align-items:center;margin-top:-8px"><input type="checkbox" id="realclock" ${useReal?'checked':''}> use the real clock</label>`;
