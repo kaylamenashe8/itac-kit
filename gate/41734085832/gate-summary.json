@@ -1,0 +1,78 @@
+{
+  "green": true,
+  "greenRuns": 5,
+  "totalRuns": 5,
+  "verdict": "GATE: 5/5 GREEN",
+  "rows": [
+    {
+      "run": 1,
+      "missing": false,
+      "passed": 7,
+      "failed": 0,
+      "flaky": 0,
+      "skipped": 1,
+      "healed": 0,
+      "durationMs": 12187.673095703125,
+      "failures": [],
+      "flakyTests": [],
+      "skippedWithBug": [],
+      "green": true
+    },
+    {
+      "run": 2,
+      "missing": false,
+      "passed": 7,
+      "failed": 0,
+      "flaky": 0,
+      "skipped": 1,
+      "healed": 0,
+      "durationMs": 11381.64306640625,
+      "failures": [],
+      "flakyTests": [],
+      "skippedWithBug": [],
+      "green": true
+    },
+    {
+      "run": 3,
+      "missing": false,
+      "passed": 7,
+      "failed": 0,
+      "flaky": 0,
+      "skipped": 1,
+      "healed": 0,
+      "durationMs": 10102.113037109375,
+      "failures": [],
+      "flakyTests": [],
+      "skippedWithBug": [],
+      "green": true
+    },
+    {
+      "run": 4,
+      "missing": false,
+      "passed": 7,
+      "failed": 0,
+      "flaky": 0,
+      "skipped": 1,
+      "healed": 0,
+      "durationMs": 11287.501953125,
+      "failures": [],
+      "flakyTests": [],
+      "skippedWithBug": [],
+      "green": true
+    },
+    {
+      "run": 5,
+      "missing": false,
+      "passed": 7,
+      "failed": 0,
+      "flaky": 0,
+      "skipped": 1,
+      "healed": 0,
+      "durationMs": 9790.299072265625,
+      "failures": [],
+      "flakyTests": [],
+      "skippedWithBug": [],
+      "green": true
+    }
+  ]
+}
