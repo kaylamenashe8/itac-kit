@@ -49,6 +49,9 @@ async function repo() {
   return repoCache;
 }
 
+/** GitHub's refusal to review your own PR (wording varies by API). */
+const OWN_PR = /own pull request|Review cannot be requested from pull request author|Can not (approve|request changes on) your own/i;
+
 const cache = new Map();
 async function gh(args, { json = true, fresh = false } = {}) {
   const r = await repo();
@@ -387,16 +390,31 @@ const routes = [
     const blocker = s.prs.find((o) => o.n !== pr.n && MERGE_ORDER.indexOf(o.agent) >= 0 && MERGE_ORDER.indexOf(o.agent) < MERGE_ORDER.indexOf(pr.agent));
     if (blocker && body.force !== true)
       throw new HttpError(409, `Merge order: #${blocker.n} (${blocker.who}) should merge first. Click again to merge anyway.`);
-    await gh(['pr', 'review', n, '--approve'], { json: false, fresh: true });
+    // Agents open PRs under Kayla's own account, and GitHub refuses a review of your own PR.
+    // Then the approval is recorded as a PR comment instead, and the merge goes ahead.
+    let via = 'review';
+    try {
+      await gh(['pr', 'review', n, '--approve'], { json: false, fresh: true });
+    } catch (e) {
+      if (!OWN_PR.test(String(e?.message ?? e))) throw e;
+      await gh(['pr', 'comment', n, '-b', 'Approved by the Lead (Control Center).'], { json: false, fresh: true });
+      via = 'comment';
+    }
     await gh(['pr', 'merge', n, '--squash'], { json: false, fresh: true });
     invalidate();
-    return { ok: true, message: `Merged #${n}${pr.issue ? `. Issue #${pr.issue} closes.` : ''}` };
+    return { ok: true, message: `Merged #${n}${pr.issue ? `. Issue #${pr.issue} closes.` : ''}${via === 'comment' ? ' (approval noted as a comment: own PR)' : ''}` };
   }],
   ['POST', /^\/api\/pr\/([^/]+)\/request-changes$/, async ([n], body) => {
     if (!NUM.test(n)) throw new HttpError(400, 'Invalid PR number');
     const text = String(body.text ?? '').trim().slice(0, 4000);
     if (!text) throw new HttpError(400, 'Write what should change');
-    await gh(['pr', 'review', n, '--request-changes', '-b', text], { json: false, fresh: true });
+    try {
+      await gh(['pr', 'review', n, '--request-changes', '-b', text], { json: false, fresh: true });
+    } catch (e) {
+      if (!OWN_PR.test(String(e?.message ?? e))) throw e;
+      // Own PR: a comment carries the request; agents read PR comments before resuming.
+      await gh(['pr', 'comment', n, '-b', `Changes requested by the Lead: ${text}`], { json: false, fresh: true });
+    }
     invalidate();
     return { ok: true, message: `Asked for changes on #${n}` };
   }],
