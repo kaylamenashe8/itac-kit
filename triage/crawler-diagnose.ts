@@ -13,7 +13,8 @@ import { isMain } from './util';
 /**
  * Rung 3 (D4): reopen the page where the test failed and look for the element it wanted.
  * Found under a new name/position/page → automation (proposes a locator or navigation).
- * Page errors or element missing everywhere → product. Page does not load → environment.
+ * Element missing everywhere WITH page errors → product; missing on a healthy page → undecided (state/setup).
+ * Page does not load → environment.
  * Budget 3 min per failure, at most 3 failures per run.
  */
 export const BUDGET_MS = 3 * 60_000;
@@ -282,10 +283,19 @@ async function diagnoseOne(f: FailedTestEx): Promise<CrawlEvidence> {
           ? `Replace ${target.raw} with ${best.locator} in the page object.`
           : `Navigate to ${new URL(best.url).pathname} before the step, then use ${best.locator}.`,
       });
+    } else if (!pageErrors.length) {
+      // Missing everywhere on a healthy page is usually missing state (test order, leftover data, a skipped
+      // step), not a product fault. Calling it product would skip the test with a false Spira bug (D9).
+      ev.verdict = mkVerdict(f, {
+        classification: 'undecided',
+        confidence: 0.4,
+        root_cause: `Element ${target.raw} is missing on ${startUrl} (${ev.pagesVisited.length} page(s) searched), but the page reports no errors: check the test's own setup, data and whether it depends on another test.`,
+        evidence: [`pages searched: ${ev.pagesVisited.length}`, 'no page errors, no failed requests'],
+      });
     } else {
       ev.verdict = mkVerdict(f, {
         classification: 'product',
-        confidence: pageErrors.length ? 0.8 : 0.7,
+        confidence: 0.8,
         root_cause: `Element ${target.raw} is missing on ${startUrl} and on ${ev.pagesVisited.length - 1} same-origin page(s) within depth 2.`,
         evidence: [
           `pages searched: ${ev.pagesVisited.length}`,
