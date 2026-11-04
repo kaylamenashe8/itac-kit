@@ -39,11 +39,14 @@ N=${PR_URL##*/}
 git switch -q - ; git branch -q -D "$BR"
 pass "PR #$N opened"
 
-echo "4. GET /api/state lists it"
-sleep 1
-post_state=$(curl -s "$BASE/api/state")
-echo "$post_state" | node -e "let d='';process.stdin.on('data',c=>d+=c).on('end',()=>{const s=JSON.parse(d);const p=s.prs.find(x=>x.n===$N);process.exit(p&&p.agent==='scribe'?0:1)})" \
-  && pass "PR #$N in review queue as scribe" || fail "PR #$N missing from /api/state (errors: $(echo "$post_state" | node -pe 'JSON.stringify(JSON.parse(require("fs").readFileSync(0)).errors)'))"
+echo "4. GET /api/state lists it (server caches gh for 20s, so poll up to 30s)"
+found=1
+for _ in $(seq 1 15); do
+  post_state=$(curl -s "$BASE/api/state")
+  echo "$post_state" | node -e "let d='';process.stdin.on('data',c=>d+=c).on('end',()=>{const s=JSON.parse(d);const p=s.prs.find(x=>x.n===$N);process.exit(p&&p.agent==='scribe'?0:1)})" && { found=0; break; }
+  sleep 2
+done
+[ $found = 0 ] && pass "PR #$N in review queue as scribe" || fail "PR #$N missing from /api/state (errors: $(echo "$post_state" | node -pe 'JSON.stringify(JSON.parse(require("fs").readFileSync(0)).errors)'))"
 
 echo "5. GET /api/pr/$N/diff"
 curl -s "$BASE/api/pr/$N/diff" | grep -q "_cc_selftest" && pass "diff served" || fail "diff missing"
