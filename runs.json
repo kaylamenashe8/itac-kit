@@ -1,5 +1,14 @@
 [
   {
+    "path": "runs/41794351893",
+    "kind": "ci",
+    "status": "failed",
+    "branch": "test/triage-e2e",
+    "commit": "61405a7f9146f9a52a9ee776d2e13335cd9d1868",
+    "date": "2026-11-04T07:47:21.823Z",
+    "runUrl": "https://github.com/kaylamenashe8/itac-kit/actions/runs/41794351893"
+  },
+  {
     "path": "gate/41734085832",
     "kind": "gate",
     "status": "passed",
