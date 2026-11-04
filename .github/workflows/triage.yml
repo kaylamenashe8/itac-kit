@@ -178,6 +178,13 @@ jobs:
     if: ${{ always() }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    env:
+      # ladder.ts imports src/config/env.ts, which validates these even in --merge-claude mode.
+      BASE_URL: ${{ vars.BASE_URL }}
+      API_URL: ${{ vars.API_URL }}
+      TEST_ID_ATTRIBUTE: ${{ vars.TEST_ID_ATTRIBUTE }}
+      TEST_USER: ${{ secrets.TEST_USER }}
+      TEST_PASSWORD: ${{ secrets.TEST_PASSWORD }}
     steps:
       - uses: actions/checkout@v4
 
